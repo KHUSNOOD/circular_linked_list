@@ -35,3 +35,20 @@ int main(){
     display(first);
     return 0;
 }
+
+
+*********** Deleting a particlular node*************
+
+// key is an int data type which is node's value;
+void del(int key){
+    struct node *p,*q;
+    p=new node; q=new node;
+    p=first;
+    q=0;
+    while(p->data!=key){
+        q=p;
+        p=p->next;
+    }
+    q->next=p->next;
+    delete p;
+}
